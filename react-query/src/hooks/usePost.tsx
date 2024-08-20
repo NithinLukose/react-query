@@ -6,7 +6,7 @@ const fetchPost = async ({
 }: QueryFunctionContext<[string, number]>) => {
   const [_key, id] = queryKey;
   try {
-    const response = await fetch(`https://jsonplaceholder.org/posts/${id}`);
+    const response = await fetch(`https://dummyjson.com/posts/${id}`);
 
     // Check if the response is not OK (status code not in the 200-299 range)
     if (!response.ok) {
