@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Posts from "./components/Posts";
 import PostDetails from "./components/PostDetails";
+import CreatePost from "./components/CreatePost";
 
 function App() {
   const [selectedPostId, setSelectedPostId] = useState<number | null>(null);
@@ -13,7 +14,10 @@ function App() {
         </button>
       )}
       {!selectedPostId ? (
-        <Posts onSelectPost={(id: number) => setSelectedPostId(id)} />
+        <>
+          <CreatePost />
+          <Posts onSelectPost={(id: number) => setSelectedPostId(id)} />
+        </>
       ) : (
         <PostDetails id={selectedPostId} />
       )}

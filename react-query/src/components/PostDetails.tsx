@@ -1,6 +1,7 @@
 import { ErrorBoundary } from "react-error-boundary";
-import usePost from "../hooks/usePost";
+// import usePost from "../hooks/usePost";
 import Post from "./Post";
+import usePost from "../hooks/usePost";
 
 const PostDetails = ({ id }: { id: number }) => {
   const { data: post, isLoading, error, isPaused, isFetching } = usePost(id);

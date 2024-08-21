@@ -1,7 +1,8 @@
 import { Fragment } from "react/jsx-runtime";
-import usePosts from "../hooks/usePosts";
+// import usePosts from "../hooks/usePosts";
 import Post from "./Post";
 import InfiniteScroll from "react-infinite-scroll-component";
+import usePosts from "../hooks/usePosts";
 
 const Posts = ({ onSelectPost }: { onSelectPost: (id: number) => void }) => {
   const limit = 50;
